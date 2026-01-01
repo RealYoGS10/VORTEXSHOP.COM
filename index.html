@@ -3,109 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VORTEX TRADING | THE GOLD STANDARD</title>
+    <title>Vortex Trading | #1 MARKET</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Syncopate:wght@700&display=swap');
-        
-        :root { --p: #d4d4d8; --a: #a855f7; --bg: #050508; }
-        
-        * { cursor: crosshair; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Plus+Jakarta+Sans:wght@300;500;800&display=swap');
+        :root { --p: #a855f7; --bg: #030305; }
+        * { cursor: default; -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
         body { 
-            background: var(--bg); color: white; font-family: 'Space Grotesk', sans-serif;
-            overflow-x: hidden; margin: 0;
+            background: var(--bg); color: white; font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden; margin: 0; padding: 0;
         }
-
-        /* 100K Robux Background Effect */
-        .vortex-bg {
+        .mesh {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(99, 102, 241, 0.15) 0%, transparent 40%);
-            background-color: var(--bg);
+            background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, transparent 50%),
+                        radial-gradient(circle at 100% 100%, #3b0764 0%, transparent 50%);
+            filter: blur(80px); opacity: 0.6;
         }
-
-        .sync { font-family: 'Syncopate', sans-serif; letter-spacing: -2px; }
-
-        /* Ultra-Premium Glass */
-        .premium-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
-            backdrop-filter: blur(30px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 40px;
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        .sync { font-family: 'Syncopate', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            transition: 0.4s ease;
         }
-        
-        .premium-card:hover {
-            border-color: rgba(168, 85, 247, 0.5);
-            background: rgba(168, 85, 247, 0.03);
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 40px 80px -20px rgba(0,0,0,0.5);
-        }
-
-        .btn-vortex {
-            background: #fff; color: #000;
-            padding: 20px 40px; border-radius: 20px;
-            font-weight: 800; text-transform: uppercase; letter-spacing: 2px;
-            transition: 0.4s; position: relative; overflow: hidden;
-        }
-        .btn-vortex:hover { background: var(--a); color: white; transform: scale(1.05); }
-
-        /* Luxury Scroller */
-        .scroller { overflow: hidden; padding: 40px 0; mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); }
-        .scroller-inner { display: flex; gap: 30px; animation: scroll 50s linear infinite; width: max-content; }
-        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-        
-        .vouch-img { 
-            width: 350px; height: 200px; object-fit: cover; border-radius: 30px; 
-            filter: grayscale(100%) brightness(0.8); transition: 0.5s;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .vouch-img:hover { filter: grayscale(0%) brightness(1); border-color: var(--a); }
-
-        .ugc-badge {
+        .glow-text { text-shadow: 0 0 15px rgba(168, 85, 247, 0.5); }
+        .btn-main {
             background: linear-gradient(90deg, #a855f7, #6366f1);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            font-weight: 900;
+            border-radius: 12px; position: relative; overflow: hidden;
+            display: inline-block; width: 100%; text-align: center;
         }
-
-        .reward-pill {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.05);
-            padding: 25px; border-radius: 30px; text-align: center;
+        .scroller { overflow: hidden; white-space: nowrap; padding: 20px 0; width: 100%; }
+        .scroller-inner { display: flex; gap: 15px; animation: scroll 40s linear infinite; width: max-content; }
+        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        .vouch-img { width: 280px; height: 160px; object-fit: cover; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
+        .ugc-box {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(99, 102, 241, 0.1));
+            border: 1px solid var(--p);
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
         }
     </style>
 </head>
 <body>
-    <div class="vortex-bg"></div>
+    <div class="mesh"></div>
 
-    <nav class="p-10 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="sync text-2xl font-black tracking-tighter italic">VORTEX</div>
-        <div class="hidden md:flex gap-10 text-[10px] font-bold tracking-[4px] uppercase opacity-40">
-            <a href="#shop" class="hover:opacity-100 transition">Market</a>
-            <a href="#vouches" class="hover:opacity-100 transition">Vouches</a>
-            <a href="#rules" class="hover:opacity-100 transition">Legals</a>
-        </div>
-        <a href="https://discord.gg/kJ9C2pQzfr" class="premium-card px-8 py-3 text-[10px] font-black tracking-[4px] uppercase border-white/20">Portal</a>
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="sync font-bold text-lg tracking-tighter text-purple-400 glow-text">VORTEX TRADING</div>
+        <a href="https://discord.gg/kJ9C2pQzfr" class="glass-card px-5 py-2 text-[10px] font-black tracking-widest uppercase">Discord</a>
     </nav>
 
-    <header class="py-20 px-6 text-center">
-        <div class="inline-block px-6 py-2 premium-card text-[9px] font-black tracking-[5px] uppercase mb-10 border-purple-500/40 text-purple-400">
-            Official Trading Hub
-        </div>
-        <h1 class="sync text-6xl md:text-9xl font-black mb-6 leading-none">VORTEX<br><span class="opacity-20 italic">TRADING</span></h1>
-        
-        <div class="max-w-xl mx-auto mt-20 premium-card p-12 border-purple-600/30 group">
-            <h2 class="sync text-4xl mb-4 italic">FREE <span class="ugc-badge">UGC</span></h2>
-            <p class="text-gray-500 text-sm mb-10 font-medium">The most exclusive items in the game, delivered daily to our members. Join the elite.</p>
-            <a href="https://discord.gg/kJ9C2pQzfr" class="btn-vortex block w-full text-sm">Access All Drops</a>
+    <header class="py-10 px-6 text-center">
+        <h1 class="sync text-4xl font-bold tracking-tighter mb-4 uppercase leading-tight">VORTEX <span class="text-purple-400">TRADING</span></h1>
+        <p class="text-gray-500 text-[10px] tracking-[4px] uppercase mb-10">Premium Roblox Assets & Currency</p>
+
+        <div class="max-w-md mx-auto glass-card ugc-box p-8 relative overflow-hidden">
+            <h2 class="sync text-2xl font-bold mb-3 italic">FREE UGC</h2>
+            <p class="text-gray-400 text-xs mb-6">Join Vortex Trading & go to <b>#FREE-UGC-CHANNELS</b> to claim all items instantly!</p>
+            <a href="https://discord.gg/kJ9C2pQzfr" class="btn-main py-4 text-xs font-black uppercase tracking-widest">Collect UGC Now</a>
         </div>
     </header>
 
-    <section id="shop" class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div class="premium-card p-12 flex flex-col justify-between">
-            <div>
-                <span class="text-purple-500 text-xs font-black tracking-[5px] uppercase">Acquire</span>
-                <h3 class="sync text-4xl mt-4 mb-6 italic">MARKETPLACE</h3>
-                <p class="text-gray-500 text-sm leading-relaxed mb-10">Premium accounts with verified statistics. BedWars, Rivals, and 4-Letter IDs. The finest stock available.</p>
+    <section class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="glass-card p-8 border-l-4 border-purple-500">
+            <h3 class="sync text-xl font-bold mb-4 uppercase italic text-purple-400">Purchase Hub</h3>
+            <p class="text-gray-400 text-xs mb-6 leading-relaxed">Secure the best BedWars and Rivals accounts via Vortex Trading. Instant delivery via our ticket system.</p>
+            <div class="bg-black/20 p-4 rounded-lg mb-6 text-[10px] text-purple-300 font-bold uppercase">
+                Step 1: Open ticket in #support<br>Step 2: Select "Buy"
+            </div>
+            <a href="https://discord.gg/kJ9C2pQzfr" class="btn-main py-4 text-xs font-black uppercase tracking-widest">Enter Shop</a>
+        </div>
+
+        <div class="glass-card p-8 border-l-4 border-indigo-500">
+            <h3 class="sync text-xl font-bold mb-4 text-indigo-400 uppercase italic">Sell / Trade</h3>
+            <p class="text-gray-400 text-xs mb-6 leading-relaxed">Turn your items into Robux. Vortex Trading offers the best rates in the market.</p>
+            <div class="bg-black/20 p-4 rounded-lg mb-6 text-[10px] text-indigo-300 font-bold uppercase">
+                Step 1: Open ticket in #support<br>Step 2: Select "Sell"
+            </div>
+            <a href="https://discord.gg/kJ9C2pQzfr" class="block w-full text-center bg-white text-black py-4 rounded-xl text-xs font-black uppercase tracking-widest">Sell Account</a>
+        </div>
+    </section>
+
+    <section class="py-10">
+        <p class="text-center text-[9px] font-bold tracking-[4px] text-gray-600 mb-6 uppercase">Vortex Trading Verified • 18+ Vouches</p>
+        <div class="scroller">
+            <div class="scroller-inner">
+                <img src="v1.jpg" class="vouch-img" onerror="this.src='https://via.placeholder.com/280x160/1a1a1a/666666?text=Vouch+Photo'">
+                <img src="v2.jpg" class="vouch-img" onerror="this.src='https://via.placeholder.com/280x160/1a1a1a/666666?text=Vouch+Photo'">
+                <img src="v3.jpg" class="vouch-img" onerror="this.src='https://via.placeholder.com/280x160/1a1a1a/666666?text=Vouch+Photo'">
+                <img src="v4.jpg" class="vouch-img" onerror="this.src='https://via.placeholder.com/280x160/1a1a1a/666666?text=Vouch+Photo'">
+                <img src="v5.jpg" class="vouch-img" onerror="this.src='https://via.placeholder.com/280x160/1a1a1a/666666?text=Vouch+Photo'">
+                <img src="v1.jpg" class="vouch-img" aria-hidden="true">
+                <img src="v2.jpg" class="vouch-img" aria-hidden="true">
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 py-10">
+        <h2 class="sync text-center text-xs font-bold mb-8 tracking-[5px] text-gray-500 uppercase">Vortex Trading Rewards</h2>
+        <div class="grid grid-cols-2 gap-3">
+            <div class="glass-card p-4 text-center">
+                <p class="text-purple-400 font-bold text-sm">3 Invites</p>
+                <p class="text-[9px] text-gray-500">Basic Acc</p>
+            </div>
+            <div class="glass-card p-4 text-center">
+                <p class="text-purple-400 font-bold text-sm">25 Invites</p>
+                <p class="text-[9px] text-gray-500">Solid Acc</p>
+            </div>
+            <div class="glass-card p-4 text-center">
+                <p class="text-purple-400 font-bold text-sm">50 Invites</p>
+                <p class="text-[9px] text-gray-500">High-Tier Acc</p>
+            </div>
+            <div class="glass-card p-4 text-center border-yellow-500/20">
+                <p class="text-yellow-400 font-bold text-sm">100 Invites</p>
+                <p class="text-[9px] text-gray-500">PREMIUM ACC</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 py-10">
+        <div class="glass-card p-8">
+            <h4 class="sync text-center text-xs mb-8 tracking-[4px]">VORTEX TRADING RULES</h4>
+            <div class="space-y-4 text-[10px] text-gray-500 font-medium">
+                <p>• BEHAVIOR: Respect all Vortex Trading members. No harassment.</p>
+                <p>• SCAMMING: Instant permanent ban for any fraud attempt.</p>
+                <p>• TICKETS: Use Vortex Trading tickets for all deals. Do not DM staff.</p>
+                <p>• PAYMENTS: Robux and Account trades only.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center">
+        <div onclick="copyEmail()" class="glass-card px-8 py-4 inline-flex items-center gap-3 active:scale-95 transition">
+            <i class="fa-solid fa-envelope text-purple-400"></i>
+            <span id="email" class="text-xs font-bold tracking-tight">gsgamingfxart@gmail.com</span>
+        </div>
+        <div class="mt-16 text-[8px] text-gray-700 tracking-[10px] font-bold uppercase">VORTEX TRADING • MMXXVI</div>
+    </footer>
+
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText("gsgamingfxart@gmail.com");
+            alert("VORTEX TRADING CONTACT COPIED");
+        }
+    </script>
+</body>
+</html>

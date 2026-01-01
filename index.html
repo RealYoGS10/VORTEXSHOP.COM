@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHIPS | THE ELITE MARKET</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Plus+Jakarta+Sans:wght@300;500;800&display=swap');
+        
+        :root { --p: #a855f7; --bg: #030305; }
+        
+        * { cursor: default; -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+        body { 
+            background: var(--bg); color: white; font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden; margin: 0; padding: 0;
+        }
+
+        /* Animated Mesh Background */
+        .mesh {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, transparent 50%),
+                        radial-gradient(circle at 100% 100%, #3b0764 0%, transparent 50%);
+            filter: blur(80px); opacity: 0.6;
+        }
+
+        .sync { font-family: 'Syncopate', sans-serif; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            transition: 0.4s ease;
+        }
+        
+        .glass-card:active { transform: scale(0.98); background: rgba(168, 85, 247, 0.05); }
+
+        .glow-text { text-shadow: 0 0 15px rgba(168, 85, 247, 0.5); }
+
+        .btn-main {
+            background: linear-gradient(90deg, #a855f7, #6366f1);
+            border-radius: 12px; position: relative; overflow: hidden;
+            display: inline-block; width: 100%; text-align: center;
+        }
+
+        /* Infinite Vouch Scroll */
+        .scroller { overflow: hidden; white-space: nowrap; padding: 20px 0; }
+        .scroller-inner { display: flex; gap: 15px; animation: scroll 30s linear infinite; width: max-content; }
+        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+        .ugc-box {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(99, 102, 241, 0.1));
+            border: 1px solid var(--p);
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="mesh"></div>
+
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="sync font-bold text-lg tracking-tighter text-purple-400 glow-text">CHIPS</div>
+        <a href="https://discord.gg/kJ9C2pQzfr" class="glass-card px-5 py-2 text-[10px] font-black tracking-widest uppercase">Discord</a>
+    </nav>
+
+    <header class="py-10 px-6 text-center">
+        <h1 class="sync text-4xl font-bold tracking-tighter mb-4 uppercase leading-tight">THE <span class="text-purple-400">ELITE</span> MARKET</h1>
+        <p class="text-gray-500 text-[10px] tracking-[4px] uppercase mb-10">Best BedWars & Rivals Accounts</p>
+
+        <div class="max-w-md mx-auto glass-card ugc-box p-8 relative overflow-hidden">
+            <h2 class="sync text-2xl font-bold mb-3 italic">FREE UGC</h2>
+            <p class="text-gray-400 text-xs mb-6">Join our Discord & go to <b>#FREE-UGC-CHANNELS</b> to claim all items instantly!</p>
+            <a href="https://discord.gg/kJ9C2pQzfr" class="btn-main py-4 text-xs font-black uppercase tracking-widest">Collect UGC Now</a>
+        </div>
+    </header>
+
+    <section class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="glass-card p-8 border-l-4 border-purple-500">
+            <h3 class="sync text-xl font-bold mb-4">SHOP AREA</h3>
+            <p class="text-gray-400 text-xs mb-6 leading-relaxed">Looking to buy? We have the most stacked accounts in the market. Verified & Secure.</p>
+            <div class="bg-black/20 p-4 rounded-lg mb-6 text-[10px] text-purple-300 font-bold uppercase">
+                Step 1: Open ticket in #support<br>Step 2: Select "Buy Account"
+            </div>
+            <a href="https://discord.gg/kJ9C2pQzfr" class="btn-main py-4 text-xs font-black uppercase tracking-widest">Enter Shop</a>
+        </div>
+
+        <div class="glass-card p-8 border-l-4 border-indigo-500">
+            <h3 class="sync text-xl font-bold mb-4 text-indigo-400">SELL AREA</h3>
+            <p class="text-gray-400 text-xs mb-6 leading-relaxed">Want to cash out? We buy accounts for Robux or offer high-value trades. Quick payouts.</p>
+            <div class="bg-black/20 p-4 rounded-lg mb-6 text-[10px] text-indigo-300 font-bold uppercase">
+                Step 1: Open ticket in #support<br>Step 2: Select "Sell Account"
+            </div>
+            <a href="https://discord.gg/kJ9C2pQzfr" class="block w-full text-center bg-white text-black py-4 rounded-xl text-xs font-black uppercase tracking-widest">Sell Account</a>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 py-10">
+        <h2 class="sync text-center text-xs font-bold mb-8 tracking-[5px] text-gray-500 uppercase">Invite Rewards</h2>
+        <div class="grid grid-cols-2 gap-3">
+            <div class="glass-card p-4 text-center">
+                <p class="text-purple-400 font-bold text-sm">3 Invites</p>
+                <p class="text-[9px] text-gray-500">Basic Acc</p>
+            </div>
+            <div class="glass-card p-4 text-center">
+                <p class="text-purple-400 font-bold text-sm">25 Invites</p>
+                <p class="text-[9px] text-gray-500">Solid Acc</p>
+            </div>
+            <div class="glass-card p-4 text-center">
+                <p class="text-purple-400 font-bold text-sm">50 Invites</p>
+                <p class="text-[9px] text-gray-500">High-Tier Acc</p>
+            </div>
+            <div class="glass-card p-4 text-center border-yellow-500/20">
+                <p class="text-yellow-400 font-bold text-sm">100 Invites</p>
+                <p class="text-[9px] text-gray-500">PREMIUM ACC</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10">
+        <p class="text-center text-[9px] font-bold tracking-[4px] text-gray-600 mb-6 uppercase">Trusted by 18+ Satisfied Customers</p>
+        <div class="scroller">
+            <div class="scroller-inner">
+                <div class="glass-card w-64 h-36 flex items-center justify-center text-[10px] text-gray-600 italic">Vouch Proof #1</div>
+                <div class="glass-card w-64 h-36 flex items-center justify-center text-[10px] text-gray-600 italic">Vouch Proof #2</div>
+                <div class="glass-card w-64 h-36 flex items-center justify-center text-[10px] text-gray-600 italic">Vouch Proof #3</div>
+                <div class="glass-card w-64 h-36 flex items-center justify-center text-[10px] text-gray-600 italic">Vouch Proof #4</div>
+                <div class="glass-card w-64 h-36 flex items-center justify-center text-[10px] text-gray-600 italic">Vouch Proof #5</div>
+                <div class="glass-card w-64 h-36 flex items-center justify-center text-[10px] text-gray-600 italic">Vouch Proof #1</div>
+                <div class="glass-card w-64 h-36 flex items-center justify-center text-[10px] text-gray-600 italic">Vouch Proof #2</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 py-10">
+        <div class="glass-card p-8">
+            <h4 class="sync text-center text-xs mb-8 tracking-[4px]">SERVER RULES</h4>
+            <div class="space-y-4 text-[10px] text-gray-500">
+                <p>• Respect staff and members. No harassment.</p>
+                <p>• Zero tolerance for scamming or fraud.</p>
+                <p>• Only trade through official tickets.</p>
+                <p>• Use approved payment methods (Robux/Accounts).</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center">
+        <div onclick="copyEmail()" class="glass-card px-8 py-4 inline-flex items-center gap-3">
+            <i class="fa-solid fa-envelope text-purple-400"></i>
+            <span id="email" class="text-xs font-bold tracking-tight">gsgamingfxart@gmail.com</span>
+        </div>
+        <div class="mt-16 text-[8px] text-gray-700 tracking-[10px] font-bold uppercase">CHIPS MARKET © 2026</div>
+    </footer>
+
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText("gsgamingfxart@gmail.com");
+            alert("SECURE CONTACT COPIED");
+        }
+    </script>
+</body>
+</html>
